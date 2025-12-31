@@ -1,0 +1,19 @@
+{
+  "name": "@repo/charts",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "react": "19.2.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/d3": "^7.4.3",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7"
+  }
+}

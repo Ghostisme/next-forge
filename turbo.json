@@ -10,28 +10,17 @@
         ".next/**",
         "!.next/cache/**",
         "**/generated/**",
-        "storybook-static/**",
-        ".react-email/**"
+        "storybook-static/**"
       ]
     },
     "test": {
       "dependsOn": ["^test"]
     },
-    "analyze": {
-      "dependsOn": ["^analyze"]
-    },
     "dev": {
       "cache": false,
       "persistent": true
     },
-    "translate": {
-      "dependsOn": ["^translate"],
-      "cache": false
-    },
     "clean": {
-      "cache": false
-    },
-    "//#clean": {
       "cache": false
     }
   }
