@@ -16,7 +16,7 @@ export { tokenStorage } from './utils/storage';
 export { PermissionChecker } from './utils/permissions';
 
 // Middleware
-export { createAuthMiddleware } from './middleware/auth-middleware';
+// export { createAuthMiddleware } from './middleware/auth-middleware';
 
 // Types
 export type {

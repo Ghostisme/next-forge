@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react';
+import { pluginRscCompat } from '@repo/vite-compat';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
@@ -6,7 +7,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    pluginRscCompat(),
+    react()
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -15,7 +19,11 @@ export default defineConfig({
       '@repo/charts': path.resolve(__dirname, '../../packages/charts'),
       '@repo/design-system': path.resolve(__dirname, '../../packages/design-system'),
       '@repo/internationalization': path.resolve(__dirname, '../../packages/internationalization'),
+      '@repo/state-management': path.resolve(__dirname, '../../packages/state-management'),
+      '@repo/vite-compat': path.resolve(__dirname, '../../packages/vite-compat'),
     },
+    dedupe: ['react', 'react-dom'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   define: {
     'process.env': {},

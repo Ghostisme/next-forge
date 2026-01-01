@@ -1,8 +1,11 @@
 import { BarChart } from '@repo/charts';
 import { PermissionWrapper, useAuth } from '@repo/rbac';
+import { useSidebar, useCurrentUser } from '@repo/state-management';
 
 export default function DashboardPage() {
   const { user, logout } = useAuth();
+  const { sidebar, toggleSidebar } = useSidebar();
+  const { currentUser } = useCurrentUser();
 
   const chartData = [
     { label: '一月', value: 30 },
@@ -12,6 +15,7 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-gray-100">
+      {sidebar.open ? '关闭' : '打开'}
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold">Vite 管理后台</h1>

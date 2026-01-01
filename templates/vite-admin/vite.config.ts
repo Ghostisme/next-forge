@@ -17,6 +17,8 @@ export default defineConfig({
       '@repo/design-system': path.resolve(__dirname, '../../packages/design-system'),
       '@repo/internationalization': path.resolve(__dirname, '../../packages/internationalization'),
     },
+    dedupe: ['react', 'react-dom'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   define: {
     'process.env': {},

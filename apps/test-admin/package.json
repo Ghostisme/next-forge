@@ -18,11 +18,12 @@
     "@repo/internationalization": "workspace:*",
     "@repo/rbac": "workspace:*",
     "@repo/request": "workspace:*",
+    "@repo/state-management": "workspace:*",
+    "@repo/vite-compat": "workspace:*",
     "lucide-react": "^0.556.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
-    "react-router-dom": "^6.28.0",
-    "zustand": "^5.0.3"
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

@@ -2,18 +2,31 @@
   "name": "@repo/rbac",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "clean": "git clean -xdf .cache .turbo dist node_modules",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  "main": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./nextjs": "./nextjs.ts",
+    "./middleware": {
+      "import": "./middleware/auth-middleware.ts",
+      "require": "./middleware/auth-middleware.ts"
+    }
   },
   "dependencies": {
-    "next": "16.0.10",
     "react": "19.2.1",
     "zod": "^4.1.13"
+  },
+  "peerDependencies": {
+    "next": ">=14.0.0"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "@types/node": "24.10.1",
-    "@types/react": "19.2.7"
+    "@types/react": "19.2.7",
+    "next": "16.0.10"
   }
 }
