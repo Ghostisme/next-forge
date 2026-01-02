@@ -1,1 +1,0 @@
-export { pluginRscCompat } from './plugin-rsc-compat';
