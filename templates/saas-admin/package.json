@@ -1,0 +1,50 @@
+{
+  "name": "@templates/saas-admin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "标准 Vite+React SPA SaaS 管理后台模板 - 统一规范化的快速开发模板",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "dependencies": {
+    "@repo/charts": "workspace:*",
+    "@repo/design-system": "workspace:*",
+    "@repo/internationalization": "workspace:*",
+    "@repo/rbac": "workspace:*",
+    "@repo/request": "workspace:*",
+    "@repo/state-management": "workspace:*",
+    "@tanstack/react-query": "^5.62.15",
+    "immer": "^10.1.1",
+    "lucide-react": "^0.556.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-router-dom": "^6.28.0",
+    "zod": "^4.1.13",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "^4.0.3",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17",
+    "terser": "^5.31.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.2.0"
+  }
+}
+

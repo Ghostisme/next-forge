@@ -20,7 +20,8 @@
     "ni": "ni",
     "nr": "nr",
     "nu": "nu",
-    "new": "tsx scripts/create-project.ts"
+    "new": "tsx scripts/create-project.ts",
+    "create-saas-app": "node scripts/create-saas-app.js"
   },
   "devDependencies": {
     "@antfu/ni": "^28.0.0",
